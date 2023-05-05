@@ -54,6 +54,19 @@ function App() {
     }
   }
 
+  const handlePaste = (event) =>{
+    event.preventDefault();
+    const pastedValue = event.clipboardData.getData("text");
+    const digits = pastedValue.match(/\d/g);
+    if(digits && digits.length === 6){
+      const newOTP =[];
+      digits.forEach((digit) =>{
+        newOTP.push(parseInt(digit));
+      })
+      setOtp(newOTP);
+    }
+  }
+
   useEffect(() =>{
     inputRef.current?.focus();
     inputRef.current?.selectionEnd;
@@ -71,6 +84,7 @@ function App() {
                   ref={index === activeOTPIndex ? inputRef : null}
                   className="transaction" onChange={handleOnChange}
                   value={otp[index]}
+                  onPaste={(e) => handlePaste(e)}
                   onKeyDown={(e) => handleOnKeyDown(e,index)}
                 />
             );
