@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.otp-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-input > input{
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.otp-input > input:focus{
+    outline: none;
+    border-color: blue;
+}
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

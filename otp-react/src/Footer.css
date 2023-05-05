@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.changes{
+    display: flex;
+    justify-content:space-between;
+    gap: 10px;
+}
+
+.changes > *{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin: 20px 20px;
+    text-decoration: none;
+}
+
+.button{
+    margin: 50px;
+    border: none;
+    background-color: #4CAF50;
+    width: 75%;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    color: white;
+    font-weight: 400;
+    border-radius: 10px;
+}
